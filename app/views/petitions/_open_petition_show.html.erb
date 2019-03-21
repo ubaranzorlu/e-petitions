@@ -34,9 +34,6 @@
   <%= render 'share_petition', petition: petition %>
 
   <ul class="petition-meta">
-    <li class="meta-created-by">
-      <span class="label">Created by</span> <%= petition.creator.name %>
-    </li>
     <li class="meta-deadline">
       <% if petition.closing_early_for_dissolution? %>
         <span class="label">Deadline</span> <%= short_date_time_format Parliament.dissolution_at %>

@@ -219,7 +219,6 @@ Then(/^I should see the vote count, closed and open dates$/) do
     expect(page).to have_css("ul.petition-meta", :text => "Date closed " + @petition.closed_at.strftime("%e %B %Y").squish)
   else
     expect(page).to have_css("li.meta-deadline", :text => "Deadline " + @petition.deadline.strftime("%e %B %Y").squish)
-    expect(page).to have_css("li.meta-created-by", :text => "Created by " + @petition.creator.name)
   end
 end
 
