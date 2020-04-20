@@ -9,6 +9,20 @@ x-application: &application
     - SMTP_HOST=mailcatcher
     - SMTP_PORT=1025
     - SPROCKETS_CACHE=/cache
+    - PETITION_DURATION=6
+    - MINIMUM_NUMBER_OF_SPONSORS=5
+    - MAXIMUM_NUMBER_OF_SPONSORS=20
+    - THRESHOLD_FOR_MODERATION=5
+    - THRESHOLD_FOR_RESPONSE=10000
+    - THRESHOLD_FOR_DEBATE=100000
+    - SECRET_KEY_BASE=FA11FA11FA11FA11FA11
+    - EPETITIONS_HOST=demokra.si
+    - EPETITIONS_PORT=80
+    - EPETITIONS_PROTOCOL=http
+    - MODERATE_HOST=moderate.demokra.si
+    - SITE_TITLE="Demokra.si"
+    - APPSIGNAL_APP_NAME=epetitions-test
+    - INLINE_UPDATES=true
   volumes:
     - .:/app
     - bundle:/bundle
@@ -45,25 +59,6 @@ services:
       "-b", "0.0.0.0",
       "-p", "3000"
     ]
-    environment: 
-      PETITION_DURATION: 6
-      MINIMUM_NUMBER_OF_SPONSORS: 5
-      MAXIMUM_NUMBER_OF_SPONSORS: 20
-      THRESHOLD_FOR_MODERATION: 5
-      THRESHOLD_FOR_RESPONSE: 10000
-      THRESHOLD_FOR_DEBATE: 100000
-      DATABASE_URL: postgres://postgres@localhost/epets_test
-      SECRET_KEY_BASE: FA11FA11FA11FA11FA11
-      EPETITIONS_HOST: demokra.si
-      EPETITIONS_PORT: 80
-      EPETITIONS_PROTOCOL: http
-      MODERATE_HOST: moderate.demokra.si
-      SITE_TITLE: "Petition parliament (Test)"
-      MEMCACHE_SERVERS: localhost:11211
-      MEMCACHE_NAMESPACE: epets_test
-      APPSIGNAL_APP_NAME: epetitions-test
-      GEOIP_DB_PATH: /path/to/GeoLite2-Country.mmdb
-      INLINE_UPDATES: "true"
     ports:
       - "80:3000"
     stdin_open: true
