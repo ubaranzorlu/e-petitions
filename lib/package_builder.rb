@@ -357,7 +357,7 @@ class PackageBuilder
 
   def website_url
     if environment == "production"
-      "https://petition.parliament.uk/"
+      "https://demokra.si/"
     else
       "https://#{environment}.epetitions.website/"
     end

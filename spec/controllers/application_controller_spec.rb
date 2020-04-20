@@ -112,12 +112,12 @@ RSpec.describe ApplicationController, type: :controller do
       request.env['PATH_INFO'] = '/petitions.geojson'
       request.env['SCRIPT_NAME'] = ''
       request.env['QUERY_STRING'] = ''
-      request.env['HTTP_HOST'] = 'petition.parliament.uk:443'
+      request.env['HTTP_HOST'] = 'demokra.si:443'
     end
 
     it "redirects to the home page" do
       get :index, format: 'geojson'
-      expect(response).to redirect_to("https://petition.parliament.uk/petitions")
+      expect(response).to redirect_to("https://demokra.si/petitions")
     end
   end
 end

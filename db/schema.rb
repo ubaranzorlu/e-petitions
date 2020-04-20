@@ -611,8 +611,8 @@ ActiveRecord::Schema.define(version: 2020_04_06_191233) do
 
   create_table "sites", id: :serial, force: :cascade do |t|
     t.string "title", limit: 50, default: "Petition parliament", null: false
-    t.string "url", limit: 50, default: "https://petition.parliament.uk", null: false
-    t.string "email_from", limit: 100, default: "\"Petitions: UK Government and Parliament\" <no-reply@petition.parliament.uk>", null: false
+    t.string "url", limit: 50, default: "https://demokra.si", null: false
+    t.string "email_from", limit: 100, default: "\"Petitions: UK Government and Parliament\" <no-reply@demokra.si>", null: false
     t.string "username", limit: 30
     t.string "password_digest", limit: 60
     t.boolean "enabled", default: true, null: false
@@ -627,7 +627,7 @@ ActiveRecord::Schema.define(version: 2020_04_06_191233) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "feedback_email", limit: 100, default: "\"Petitions: UK Government and Parliament\" <petitionscommittee@parliament.uk>", null: false
-    t.string "moderate_url", limit: 50, default: "https://moderate.petition.parliament.uk", null: false
+    t.string "moderate_url", limit: 50, default: "https://moderate.demokra.si", null: false
     t.datetime "last_petition_created_at"
     t.integer "login_timeout", default: 1800, null: false
     t.jsonb "feature_flags", default: {}, null: false

@@ -76,7 +76,7 @@ Similarly, individual cucumber features can be run using the following command:
 docker-compose run --rm web cucumber features/suzie_views_a_petition.feature
 ```
 
-[1]: https://petition.parliament.uk
+[1]: https://demokra.si
 [2]: https://www.docker.com/products/docker-desktop
 [3]: http://localhost:3000/
 [4]: http://localhost:3000/admin

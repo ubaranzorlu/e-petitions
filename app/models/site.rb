@@ -246,7 +246,7 @@ class Site < ActiveRecord::Base
     end
 
     def default_host
-      ENV.fetch('EPETITIONS_HOST', 'petition.parliament.uk')
+      ENV.fetch('EPETITIONS_HOST', 'demokra.si')
     end
 
     def default_domain(tld_length = 1)
@@ -266,7 +266,7 @@ class Site < ActiveRecord::Base
     end
 
     def default_moderate_host
-      ENV.fetch('MODERATE_HOST', 'moderate.petition.parliament.uk')
+      ENV.fetch('MODERATE_HOST', 'moderate.demokra.si')
     end
 
     def default_port

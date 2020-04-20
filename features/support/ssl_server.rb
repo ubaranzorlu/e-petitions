@@ -17,7 +17,7 @@ module Epets
           SSLVerifyClient: OpenSSL::SSL::VERIFY_NONE,
           SSLPrivateKey:   private_key,
           SSLCertificate:  ssl_certificate,
-          SSLCertName:     [['GB', 'petition.parliament.uk']],
+          SSLCertName:     [['GB', 'demokra.si']],
           AccessLog:       [],
           Logger:          logger
         }
@@ -64,7 +64,7 @@ module Epets
         details << 'L=London'
         details << 'O=Houses of Parliament'
         details << 'OU=Parliamentary ICT'
-        details << 'CN=petition.parliament.uk'
+        details << 'CN=demokra.si'
 
         args = %w[openssl req -x509]
         args.concat ['-newkey', 'rsa:2048']

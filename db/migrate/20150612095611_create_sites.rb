@@ -2,8 +2,8 @@ class CreateSites < ActiveRecord::Migration[4.2]
   def change
     create_table :sites do |t|
       t.string    :title, limit: 50, null: false, default: 'Petition parliament'
-      t.string    :url, limit: 50, null: false, default: 'https://petition.parliament.uk'
-      t.string    :email_from, limit: 50, null: false, default: 'no-reply@petition.parliament.uk'
+      t.string    :url, limit: 50, null: false, default: 'https://demokra.si'
+      t.string    :email_from, limit: 50, null: false, default: 'no-reply@demokra.si'
       t.string    :username, limit: 30
       t.string    :password_digest, limit: 60
       t.boolean   :enabled, null: false, default: true

@@ -9,7 +9,7 @@ require 'webrick/httpproxy'
 
 class EpetsProxyServer < WEBrick::HTTPProxyServer
   def do_CONNECT(req, res)
-    if req.unparsed_uri =~ /petition.parliament.uk/
+    if req.unparsed_uri =~ /demokra.si/
       req.instance_variable_set(:@unparsed_uri, '127.0.0.1:3443')
     end
 

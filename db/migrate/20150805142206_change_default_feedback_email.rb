@@ -4,6 +4,6 @@ class ChangeDefaultFeedbackEmail < ActiveRecord::Migration[4.2]
   end
 
   def down
-    change_column_default :sites, :feedback_email, '"Petitions: UK Government and Parliament" <feedback@petition.parliament.uk>'
+    change_column_default :sites, :feedback_email, '"Petitions: UK Government and Parliament" <feedback@demokra.si>'
   end
 end
