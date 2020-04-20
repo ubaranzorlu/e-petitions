@@ -63,7 +63,7 @@ services:
       MEMCACHE_NAMESPACE: epets_test
       APPSIGNAL_APP_NAME: epetitions-test
       GEOIP_DB_PATH: /path/to/GeoLite2-Country.mmdb
-      INLINE_UPDATES: true
+      INLINE_UPDATES: "true"
     ports:
       - "80:3000"
     stdin_open: true
